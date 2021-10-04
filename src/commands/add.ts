@@ -22,9 +22,9 @@ export const addNote: (
   args: Arguments<InferredOptionTypes<{ [key: string]: Options }>>
 ) => void | Promise<void> = ({ title, body }) => {
   const notes = loadNotes();
-  const duplicatedNotes = notes.filter((note) => note.title === title);
+  const duplicatedNote = notes.find((note) => note.title === title);
 
-  if (duplicatedNotes.length === 0) {
+  if (!duplicatedNote) {
     const newNotes = [...notes, { title, body }] as NoteType[];
     saveNotes(newNotes);
     console.log(chalk.green.inverse("New note added!"));
@@ -32,5 +32,3 @@ export const addNote: (
     console.log(chalk.red.inverse("Note title taken!"));
   }
 };
-
-
