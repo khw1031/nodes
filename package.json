@@ -2,5 +2,18 @@
   "name": "nodes",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/app.ts"
+  },
+  "dependencies": {
+    "@types/node": "^16.10.2",
+    "@types/yargs": "^17.0.3",
+    "chalk": "^4.1.2",
+    "ts-node": "^10.2.1",
+    "yargs": "^17.2.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  }
 }
