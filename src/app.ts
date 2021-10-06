@@ -1,14 +1,11 @@
-import yargs from "yargs";
-import { addBuilder, addDescribe, addNote } from "./commands/add";
-import { listBuilder, listDescribe, listNote } from "./commands/list";
-import { readBuilder, readDescribe, readNote } from "./commands/read";
-import { removeBuilder, removeDescribe, removeNote } from "./commands/remove";
-import { CommandType } from "./typings";
+import path from "path";
+import express from "express";
 
-// Creates command
-yargs
-  .command(CommandType.ADD, addDescribe, addBuilder, addNote)
-  .command(CommandType.REMOVE, removeDescribe, removeBuilder, removeNote)
-  .command(CommandType.LIST, listDescribe, listBuilder, listNote)
-  .command(CommandType.READ, readDescribe, readBuilder, readNote)
-  .parse();
+const app = express();
+const port = 3003;
+
+app.get("/", (req, res) => {});
+
+app.listen(port, () => {
+  console.log("Server is up on http://localhost:" + port);
+});
