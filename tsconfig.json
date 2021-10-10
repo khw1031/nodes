@@ -7,13 +7,12 @@
     "sourceMap": true,
     "moduleResolution": "Node",
     "strict": true,
+    "noEmit": true,
     "noEmitOnError": true,
     "removeComments": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "experimentalDecorators": true,
-    "rootDir": "./src",
-    "outDir": "./dist"
+    "experimentalDecorators": true
   }
 }
